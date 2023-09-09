@@ -2,9 +2,10 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import corpcommentImg from "public/corpcomment.png";
+import rmtdevImg from "public/rmtdev.png";
+import wordanalyticsImg from "public/wordanalytics.png";
+import profileImg from "public/PROF.png"
 
 export const links = [
   {
@@ -32,6 +33,12 @@ export const links = [
     hash: "#contact",
   },
 ] as const;
+
+export const IntroData = {
+  profileImg : profileImg,
+  description : "Im developer"
+} as const
+
 
 export const experiencesData = [
   {
@@ -71,7 +78,7 @@ export const projectsData = [
   {
     title: "rmtDev",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
+      "Job board for remo}te developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
     tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
     imageUrl: rmtdevImg,
   },
