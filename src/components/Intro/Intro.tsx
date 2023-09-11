@@ -1,17 +1,30 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { IntroData } from "@/lib/const/skillsData";
 import { linkedinUrl, githubUrl, resumePdf } from "@/lib/const/socialsLinks";
 import { ButtonCV, ButtonGithub, ButtonLinkedin, ButtonContactMe } from "@/components/Buttons";
 import IntroText from "@/components/IntroText";
 import { motion } from "framer-motion";
-
+import { useInView } from "react-intersection-observer";
+import useActiveSectionContext from "@/hooks/useActiveSectionContext";
 
 const Intro = () => {
+
+    const {ref, inView} = useInView({
+        threshold: 1
+        });
+    const {setActiveSection} = useActiveSectionContext();
+
+    useEffect(() => {
+    if (inView) {
+        setActiveSection("Home")
+    }
+    },[inView, setActiveSection])
+
     return (
-        <section className="mb-28 max-w-[58rem] text-center sm:mb-0">
+        <section ref={ref} id="home" className="mb-28 max-w-[58rem] text-center sm:mb-0 scroll-mt-[100rem]">
             <div className="flex items-center justify-center">
                 <div className="relative">
                     <motion.div
