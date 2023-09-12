@@ -6,6 +6,8 @@ import { FaRegPaperPlane } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 import useSectionInView from '@/hooks/useSectionInView'
 import { sendEmail } from '@/actions/send-email'
+import ButtonSumbit from '../ButtonSumbit'
+import toast from "react-hot-toast"
 
 const Contact = () => {
 
@@ -42,9 +44,14 @@ const Contact = () => {
         
         <form className="mt-10 flex flex-col"
         action={async (formData) => {
-            console.log("This running on client")
-            console.log(formData)
-            sendEmail(formData)
+            const { data, error } = await sendEmail(formData)
+
+            if (error) {
+                toast.error(error)
+                return;
+            }
+
+            toast.success("Email sent successfully.")
         }}>
             <input 
                 className="h-14 px-4 rounded-lg borderBL"
@@ -61,10 +68,7 @@ const Contact = () => {
                 required
                 maxLength={500}             
             />
-            <button className="flex items-center justify-center gap-2 h-[3rem] w-[8rem] 
-            bg-gray-900 text-white rounded-full outline-none transition-all" type="submit">
-                Sumbit <FaRegPaperPlane className="text-xs opacity-70 transition-all"/>
-            </button>
+            <ButtonSumbit />
         </form>
     </motion.section>
   )
