@@ -5,19 +5,11 @@ import { motion } from "framer-motion";
 import SectionHeading from "../SectionHeading/SectionHeading";
 import { useInView } from "react-intersection-observer";
 import useActiveSectionContext from "@/hooks/useActiveSectionContext";
+import useSectionInView from "@/hooks/useSectionInView";
 
 export default function About() {
-//   const { ref } = useSectionInView("About");
-  const {ref, inView} = useInView({
-    threshold: 1
-  });
-  const {setActiveSection} = useActiveSectionContext();
 
-  useEffect(() => {
-    if (inView) {
-      setActiveSection("About")
-    }
-  },[inView, setActiveSection])
+  const { ref } = useSectionInView("About", 1)
 
   return (
     <motion.section
@@ -48,11 +40,11 @@ export default function About() {
       </p>
 
       <p>
-        <span className="italic">When I'm not coding</span>, I enjoy playing
+        <span className="italic">When I&apos;m not coding</span>, I enjoy playing
         video games, watching movies, and playing with my dog. I also enjoy{" "}
         <span className="font-medium">learning new things</span>. I am currently
         learning about{" "}
-        <span className="font-medium">history and philosophy</span>. I'm also
+        <span className="font-medium">history and philosophy</span>. I&apos;m also
         learning how to play the guitar.
       </p>
     </motion.section>

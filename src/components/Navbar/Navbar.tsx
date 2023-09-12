@@ -8,7 +8,7 @@ import clsx from "clsx"
 import useActiveSectionContext from '@/hooks/useActiveSectionContext'
 
 const Navbar = () => {
-  const {activeSection, setActiveSection} = useActiveSectionContext();
+  const {activeSection, setActiveSection, setTimeOfLastClick} = useActiveSectionContext();
 
   return (
     <div className="z-[999] relative">
@@ -34,7 +34,10 @@ const Navbar = () => {
                     className={clsx("flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition", 
                     {"text-gray-950" : activeSection === link.name})} 
                     href={link.hash}
-                    onClick={() => setActiveSection(link.name)}
+                    onClick={() => {
+                      setActiveSection(link.name)
+                      setTimeOfLastClick(Date.now())
+                    }}
                     >
                       {link.name}
                       {link.name === activeSection && (

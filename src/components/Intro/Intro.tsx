@@ -1,27 +1,18 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Image from "next/image";
 import { IntroData } from "@/lib/const/skillsData";
 import { linkedinUrl, githubUrl, resumePdf } from "@/lib/const/socialsLinks";
 import { ButtonCV, ButtonGithub, ButtonLinkedin, ButtonContactMe } from "@/components/Buttons";
 import IntroText from "@/components/IntroText";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import useActiveSectionContext from "@/hooks/useActiveSectionContext";
+
+import useSectionInView from "@/hooks/useSectionInView";
 
 const Intro = () => {
 
-    const {ref, inView} = useInView({
-        threshold: 1
-        });
-    const {setActiveSection} = useActiveSectionContext();
-
-    useEffect(() => {
-    if (inView) {
-        setActiveSection("Home")
-    }
-    },[inView, setActiveSection])
+    const { ref } = useSectionInView("Home");      
 
     return (
         <section ref={ref} id="home" className="mb-28 max-w-[58rem] text-center sm:mb-0 scroll-mt-[100rem]">
@@ -76,7 +67,7 @@ const Intro = () => {
                     delay: 0.1,
                 }}
             >
-                <ButtonContactMe href="#Contact" />
+                <ButtonContactMe href="#contact" sectionName="Contact"/>
                 <ButtonCV href={resumePdf} />
                 <div className="flex h-[52px] flex-row items-center justify-center gap-3 ">
                     <ButtonLinkedin href={linkedinUrl} />

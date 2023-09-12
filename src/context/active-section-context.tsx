@@ -1,26 +1,27 @@
 'use client'
 
 import React, { createContext, useState } from 'react'
-import { links } from '@/lib/const/skillsData'
+import { 
+    ActiveSectionContextType, 
+    ActiveSectionNameType,
+} from '@/lib/types/activeSectionTypes'
 
-type ActiveSectionNameType = typeof links[number]["name"]
 type ActiveSectionProviderProps = {
     children : React.ReactNode
-}
-type ActiveSectionContextType = {
-    activeSection : ActiveSectionNameType,
-    setActiveSection : React.Dispatch<React.SetStateAction<ActiveSectionNameType>>
 }
 
 export const ActiveSectionContext = createContext<ActiveSectionContextType | null>(null)
 
 const ActiveSectionContextProvider = ({children} : ActiveSectionProviderProps) => {
     const [activeSection, setActiveSection] = useState<ActiveSectionNameType>("Home");
+    const [timeOfLastClick, setTimeOfLastClick] = useState<number>(Date.now() - 500);
             
   return (
     <ActiveSectionContext.Provider value={{
         activeSection,
-        setActiveSection
+        setActiveSection,
+        timeOfLastClick,
+        setTimeOfLastClick
     }}>
         {children}
     </ActiveSectionContext.Provider>
