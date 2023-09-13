@@ -44,7 +44,7 @@ export const Project = ({title, description, tags, imageUrl, githubLink}: Projec
         className="group mb-3 sm:mb-10 last:mb-0"
         >
             <section
-                className="bg-gradient-to-bl from-transparent to-slate-200 dark:to-slate-300/10 hover:to-slate-300 dark:hover:to-slate-300/20 max-w-[42rem] w-[42rem]
+                className="bg-gradient-to-bl from-transparent to-slate-200 dark:to-slate-300/10 hover:to-slate-300 dark:hover:to-slate-300/20 max-w-[42rem] md:w-[42rem]
                 border-black/5 overflow-hidden sm:pr-8 relative sm:h-[20rem] transition-all ">
               <div className="py-4 px-5 pb-8 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[50%]">
                 <h3 className="flex justify-between items-center text-2xl font-semibold">{title}
@@ -65,7 +65,7 @@ export const Project = ({title, description, tags, imageUrl, githubLink}: Projec
               <Image 
                 src={getImage()}
                 alt={description}
-                quality={95}
+                quality={75}
                 className="absolute hidden sm:block top-8 -right-40 w-[28rem] h-[25rem] object-cover rounded-t-lg shadow-2xl
                 group-hover:-translate-x-3
                 group-hover:translate-y-3
