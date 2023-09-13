@@ -4,8 +4,10 @@ import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "public/corpcomment.png";
 import rmtdevImg from "public/rmtdev.png";
-import wordanalyticsImg from "public/wordanalytics.png";
+import hypespaceImg from "public/Screenshot_516.png";
 import profileImg from "public/PROF.png"
+import potfolioImgDark from "public/Screenshot_515.png"
+import potfolioImgLight from "public/Screenshot_517.png"
 
 export const links = [
   {
@@ -42,53 +44,68 @@ export const IntroData = {
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Wrocław University of Science and Technology",
+    location: "Wrocław, Poland",
+    position: null,
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "Bachelor of Engineering in Computer Science.",
     icon: React.createElement(LuGraduationCap),
-    date: "2019",
+    date: "2017-2022",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "Sellintegro",
+    position: "Junior C# Developer",
+    location: "Wrocław, Poland",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "Accomplished software developer with a track record of enhancing system performance through bug resolution and successful implementation of new functionality.",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "2021",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "DevNet",
+    location: "Wrocław, Poland (remote)",
+    position: "Software Engineer",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+      "Contributed significantly to a high-impact project focused on developing automatic algorithmic energy trading software for European markets. Collaborated within a specialized team responsible for the non-algorithmic backend components of the project.",
     icon: React.createElement(FaReact),
-    date: "2021 - present",
+    date: "2022 - 2023",
+  },
+  {
+    title: "Rigby",
+    location: "Wrocław, Poland (remote)",
+    position: "FullStack Engineer",
+    description:
+      "Helping building fast e-commerce apps for individual clients.",
+    icon: React.createElement(FaReact),
+    date: "2023 - present",
   },
 ] as const;
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "This website",
+    githubLink: "https://github.com/PawelDuplaga/portfolio-website",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "Simple, minimalistic personal portoflio for current and future projects.",
+    tags: ["React", "Next.js","TypeScript", "Tailwind", "Framer motion"],
+    imageUrl: [potfolioImgLight, potfolioImgDark]
   },
   {
-    title: "rmtDev",
+    title: "Hypespace",
+    githubLink: "https://github.com/PawelDuplaga/hypespace_frontend",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+      "E-commerce web application, using headless cms - Medusa.js ",
+    tags: ["Medusa.js", "React", "TypeScript", "Next.js", "Zustand"],
+    imageUrl: [hypespaceImg,]
   },
-  {
-    title: "Word Analytics",
-    description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
-  },
+  // {
+  //   title: "Word Analytics",
+  //   githubLink: "https://github.com/PawelDuplaga/hypespace_frontend",
+  //   description:
+  //     "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
+  //   tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
+  //   imageUrl: wordanalyticsImg,
+  // },
 ] as const;
 
 

@@ -4,6 +4,7 @@ import React from "react";
 import { Resend } from "resend";
 import { validateString, getErrorMessage } from "@/lib/utils";
 import ContactFormEmail from "@/email/ContactFormEmail"
+import toast from "react-hot-toast"
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -26,7 +27,7 @@ export const sendEmail = async (formData: FormData) => {
   let data;
   try {
     data = await resend.emails.send({
-      from: "Contact Form <onboarding@resend.dev>",
+      from: "✋ Personal website | Contact Form <onboarding@resend.dev>",
       to: "pawelduplagait@gmail.com",
       subject: "Message from contact form",
       reply_to: senderEmail,

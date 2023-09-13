@@ -6,11 +6,12 @@ import { experiencesData, skillsData } from '@/lib/const/skillsData';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import useSectionInView from '@/hooks/useSectionInView';
+import useTheme from '@/hooks/useTheme';
 
 const Experience = () => {
 
     const { ref } = useSectionInView("Experience", 1);
-
+    const { theme } = useTheme()
 
   return (
     <section ref={ref} id="experience" className="scroll-mt-28 mb-28">
@@ -21,27 +22,43 @@ const Experience = () => {
                     <React.Fragment key={index}>
                         <VerticalTimelineElement
                             contentStyle={{
-                                background: "#f3f4f6",
+                                background:
+                                    theme === "light" 
+                                    ? "#f3f4f6" 
+                                    : "rgb(156 163 175 / 0.1)",
                                 boxShadow: "none",
                                 border: "1px solid rgba(0, 0, 0, 0.05)",
                                 padding: "1.3rem 2rem",
 
                             }}
                             contentArrowStyle={{
-                                borderRight: "0.4rem solid #9ca3af"
+                                borderRight: 
+                                    theme === "light" 
+                                    ? "0.4rem solid #9ca3af" 
+                                    : "0.4rem solid rgba(255, 255, 255, 0.5)"
                             }}
                             date={item.date}
                             icon={item.icon}
                             iconStyle={{
                                 display: "flex",
-                                background: "white",
+                                background: 
+                                    theme === "light" 
+                                    ? "white" 
+                                    : "rgba(55, 65, 81, 1)" ,
                                 transform: "translateY(1px)",
+                                boxShadow: 
+                                    theme === "light" 
+                                    ? "box-shadow: initial" 
+                                    : "none",
                                 paddingTop: "2px"
                             }}
                         >
-                            <h3 className="font-semibold capitalize">{item.title}</h3>
-                            <p className="font-normal !mt-0">{item.location}</p>
-                            <p className='!mt-1 !font-normal text-gray-700'>{item.description}</p>
+                            <h3 className="font-semibold capitalize dark:text-white">{item.title}</h3>
+                            <div className="flex gap-2">
+                                {item?.position && <h4 className="dark:text-white/40">{item.position} |</h4>}
+                                <p className="font-normal !mt-0 dark:text-white/40">{item.location}</p>
+                            </div>
+                            <p className='!mt-1 !font-normal text-gray-700 dark:text-white/75'>{item.description}</p>
                         </VerticalTimelineElement>
                     </React.Fragment>
                 ))
