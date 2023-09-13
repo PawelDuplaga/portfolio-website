@@ -2,10 +2,8 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "public/corpcomment.png";
-import rmtdevImg from "public/rmtdev.png";
 import hypespaceImg from "public/Screenshot_516.png";
-import profileImg from "public/PROF.png"
+import profileImg from "public/profile.png"
 import potfolioImgDark from "public/Screenshot_515.png"
 import potfolioImgLight from "public/Screenshot_517.png"
 
