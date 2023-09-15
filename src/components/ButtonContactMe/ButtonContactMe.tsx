@@ -10,13 +10,14 @@ type ButtonContactMeProps = {
 }
 
 const ButtonContactMe = ({href, sectionName} : ButtonContactMeProps) => {
-    const {activeSection, setActiveSection, setTimeOfLastClick} = useActiveSectionContext();
+    const {setActiveSection, setTimeOfLastClick} = useActiveSectionContext();
 
     return (
         <Link
             href={href}
             className="group flex h-[52px] min-w-[226px] cursor-pointer items-center justify-center gap-2 rounded-full bg-gray-900 px-7 py-3 
                     text-white outline-none transition hover:scale-110 hover:bg-gray-950 focus:scale-110 active:scale-95"
+            aria-label="Scroll to Contact me section"
             onClick={() => {
                 setActiveSection(sectionName)
                 setTimeOfLastClick(Date.now())

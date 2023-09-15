@@ -14,6 +14,7 @@ const ThemeSwitch = () => {
         w-[3rem] h-[3rem] bg-opacity-0 backdrop-blur-[0.5rem] border 
         border-none shadow-2xl rounded-full flex items-center justify-center 
         hover:scale-[1.15] active:scale-105 dark:bg-gray-950/40 transition-all'
+        name="theme switch button"
         onClick={() => toggleTheme()}
 
     >
