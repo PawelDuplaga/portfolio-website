@@ -29,6 +29,7 @@ const Intro = () => {
                         <Image
                             src={IntroData.profileImg}
                             alt="Paweł Duplaga fullstack developer profile"
+                            loading="eager"
                             width={192}
                             height={192}
                             quality={95}

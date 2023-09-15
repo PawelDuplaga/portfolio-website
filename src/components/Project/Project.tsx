@@ -65,6 +65,7 @@ export const Project = ({title, description, tags, imageUrl, githubLink}: Projec
               <Image 
                 src={getImage()}
                 alt={description}
+                loading="eager"
                 quality={50}
                 className="absolute hidden sm:block top-8 -right-40 w-[28rem] h-[25rem] object-cover rounded-t-lg shadow-2xl
                 group-hover:-translate-x-3
