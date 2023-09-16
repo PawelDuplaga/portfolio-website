@@ -2,7 +2,7 @@
 
 import React from 'react'
 import SectionHeading from '../SectionHeading'
-import { experiencesData, skillsData } from '@/lib/const/skillsData';
+import { experiencesData} from '@/lib/const/skillsData';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import useSectionInView from '@/hooks/useSectionInView';
@@ -48,7 +48,7 @@ const Experience = () => {
                                 transform: "translateY(1px)",
                                 boxShadow: 
                                     theme === "light" 
-                                    ? "box-shadow: initial" 
+                                    ? "0 0 0 2px white, inset 0 4px 10px rgba(0, 0, 0, 0.12), 0 2px 0 4px rgba(0, 0, 0, 0.05)" 
                                     : "none",
                                 paddingTop: "2px"
                             }}
