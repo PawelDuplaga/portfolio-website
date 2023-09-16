@@ -7,7 +7,7 @@ const ButtonCV = (props: { href: string }) => {
             className="group flex h-[52px] min-w-[200px] cursor-pointer items-center gap-2 rounded-full bg-white px-7 py-3
                     outline-none transition hover:scale-110 focus:scale-110 active:scale-95 dark:bg-gray-50/10 dark:text-white"
             href={props.href}
-            aria-label="Download Pawel Duplaga resume"
+            aria-label="Download CV"
             download
         >
             Download CV{" "}
