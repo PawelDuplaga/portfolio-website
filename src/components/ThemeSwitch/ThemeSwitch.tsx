@@ -1,13 +1,13 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { BsMoon, BsSun } from 'react-icons/bs'
-import { Theme } from '@/lib/types/themeTypes';
-import useTheme from '@/hooks/useTheme';
+import { useThemeStore, useThemeStoreHook } from '@/store/useThemeStore';
 
 const ThemeSwitch = () => {
-    const {theme, toggleTheme} = useTheme();
-
+    const {theme, toggleTheme} = useThemeStoreHook();
+    console.log("Theme switch rerender")
+    console.log(theme)
   return (
     <button 
         className='fixed bottom-5 right-5 bg-white 

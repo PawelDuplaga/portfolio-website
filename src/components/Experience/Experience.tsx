@@ -6,12 +6,12 @@ import { experiencesData} from '@/lib/const/skillsData';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import useSectionInView from '@/hooks/useSectionInView';
-import useTheme from '@/hooks/useTheme';
+import { useThemeStore } from '@/store/useThemeStore';
 
 const Experience = () => {
 
     const { ref } = useSectionInView("Experience", 1);
-    const { theme } = useTheme()
+    const { theme } = useThemeStore()
 
   return (
     <section ref={ref} id="experience" className="scroll-mt-28 mb-28">

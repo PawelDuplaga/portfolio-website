@@ -5,21 +5,14 @@ import { projectsData } from '@/lib/const/skillsData'
 import Image from 'next/image'
 import { useScroll, motion, useTransform } from 'framer-motion'
 import { BsGithub } from 'react-icons/bs'
-import useTheme from '@/hooks/useTheme'
-
-// interface ProjectProps {
-//     readonly title : string,
-//     readonly description : string,
-//     readonly tags : readonly string[],
-//     readonly imageUrl : StaticImageData,
-// }
+import { useThemeStore } from '@/store/useThemeStore'
 
 type ProjectProps = (typeof projectsData)[number]
 
 
 export const Project = ({title, description, tags, imageUrl, githubLink}: ProjectProps) => {
   const projectRef = useRef<HTMLDivElement>(null)
-  const { theme } = useTheme()
+  const { theme } = useThemeStore()
   const { scrollYProgress } = useScroll({
     target: projectRef,
     offset:["0 1","1.33 1"]
