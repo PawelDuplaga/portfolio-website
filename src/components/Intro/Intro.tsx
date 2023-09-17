@@ -7,12 +7,11 @@ import { linkedinUrl, githubUrl, resumePdf } from "@/lib/const/socialsLinks";
 import { ButtonCV, ButtonGithub, ButtonLinkedin, ButtonContactMe } from "@/components/Buttons";
 import IntroText from "@/components/IntroText";
 import { motion } from "framer-motion";
-
-import useSectionInView from "@/hooks/useSectionInView";
+import { useActiveSection } from "@/zustand/useActiveSection";
 
 const Intro = () => {
 
-    const { ref } = useSectionInView("Home");      
+    const { ref } = useActiveSection("Home");      
 
     return (
         <section ref={ref} id="home" className="mb-28 max-w-[58rem] text-center sm:mb-0 scroll-mt-[100rem]">

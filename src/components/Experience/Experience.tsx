@@ -5,12 +5,12 @@ import SectionHeading from '../SectionHeading'
 import { experiencesData} from '@/lib/const/skillsData';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import useSectionInView from '@/hooks/useSectionInView';
-import { useThemeStore } from '@/store/useThemeStore';
+import { useThemeStore } from '@/zustand/useThemeStore';
+import { useActiveSection } from '@/zustand/useActiveSection';
 
 const Experience = () => {
 
-    const { ref } = useSectionInView("Experience", 1);
+    const { ref } = useActiveSection("Experience", 1);
     const { theme } = useThemeStore()
 
   return (

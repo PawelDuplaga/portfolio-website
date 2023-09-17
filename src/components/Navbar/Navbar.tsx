@@ -5,10 +5,10 @@ import { motion } from "framer-motion"
 import Link from 'next/link'
 import { links } from '@/lib/const/skillsData'
 import clsx from "clsx"
-import useActiveSectionContext from '@/hooks/useActiveSectionContext'
+import { useActiveSectionStore } from '@/zustand/useActiveSection'
 
 const Navbar = () => {
-  const {activeSection, setActiveSection, setTimeOfLastClick} = useActiveSectionContext();
+  const {activeSection, setActiveSection, setTimeOfLastClick} = useActiveSectionStore();
   return (
     <div className="z-[999] relative">
         <motion.div className="fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none border
@@ -41,7 +41,7 @@ const Navbar = () => {
                     href={link.hash}
                     onClick={() => {
                       setActiveSection(link.name)
-                      setTimeOfLastClick(Date.now())
+                      setTimeOfLastClick()
                     }}
                     >
                       {link.name}

@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { BsMoon, BsSun } from 'react-icons/bs'
-import { useThemeStore, useThemeStoreHook } from '@/store/useThemeStore';
+import { useThemeStoreHook } from '@/zustand/useThemeStore';
 
 const ThemeSwitch = () => {
     const {theme, toggleTheme} = useThemeStoreHook();

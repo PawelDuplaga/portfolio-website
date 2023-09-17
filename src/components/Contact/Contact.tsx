@@ -2,17 +2,15 @@
 
 import React from 'react'
 import SectionHeading from '../SectionHeading'
-import { FaRegPaperPlane } from 'react-icons/fa'
 import { motion } from 'framer-motion'
-import useSectionInView from '@/hooks/useSectionInView'
 import { sendEmail } from '@/actions/send-email'
 import ButtonSumbit from '../ButtonSumbit'
 import toast from "react-hot-toast"
-import { error } from 'console'
+import { useActiveSection } from '@/zustand/useActiveSection'
 
 const Contact = () => {
 
-  const { ref } = useSectionInView("Contact", 1)
+  const { ref } = useActiveSection("Contact", 1)
  
   return (
     <motion.section 

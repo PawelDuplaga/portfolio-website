@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
-import useActiveSectionContext from "@/hooks/useActiveSectionContext";
 import { ActiveSectionNameType } from "@/lib/types/activeSectionTypes";
+import { useActiveSectionStore } from "@/zustand/useActiveSection";
 
 type ButtonContactMeProps = {
     href : string,
@@ -10,7 +10,7 @@ type ButtonContactMeProps = {
 }
 
 const ButtonContactMe = ({href, sectionName} : ButtonContactMeProps) => {
-    const {setActiveSection, setTimeOfLastClick} = useActiveSectionContext();
+    const {setActiveSection, setTimeOfLastClick} = useActiveSectionStore();
 
     return (
         <Link
@@ -20,7 +20,7 @@ const ButtonContactMe = ({href, sectionName} : ButtonContactMeProps) => {
             aria-label="Scroll to Contact me here section"
             onClick={() => {
                 setActiveSection(sectionName)
-                setTimeOfLastClick(Date.now())
+                setTimeOfLastClick()
                 }}
         >
             Contact me here{" "}

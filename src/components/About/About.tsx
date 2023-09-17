@@ -1,15 +1,13 @@
 "use client";
 
-import React, { useContext, useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import SectionHeading from "../SectionHeading/SectionHeading";
-import { useInView } from "react-intersection-observer";
-import useActiveSectionContext from "@/hooks/useActiveSectionContext";
-import useSectionInView from "@/hooks/useSectionInView";
+import { useActiveSection } from "@/zustand/useActiveSection";
 
 export default function About() {
 
-  const { ref } = useSectionInView("About", 1)
+  const { ref } = useActiveSection("About", 1)
 
   return (
     <motion.section

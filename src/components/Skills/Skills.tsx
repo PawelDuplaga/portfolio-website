@@ -3,13 +3,13 @@
 import React from 'react'
 import SectionHeading from '../SectionHeading'
 import { skillsData } from '@/lib/const/skillsData'
-import useSectionInView from '@/hooks/useSectionInView'
 import {motion} from 'framer-motion'
 import { fadeInAnimationVariants } from './funcSkills'
+import { useActiveSection } from '@/zustand/useActiveSection'
 
 const Skills = () => {
 
-  const { ref } = useSectionInView("Skills", 1)
+  const { ref } = useActiveSection("Skills", 1)
 
   return (
     <section id="skills" ref={ref} className="mb-28 scroll-mt-28 max-w-[53rem] text-center sm:mb-40">

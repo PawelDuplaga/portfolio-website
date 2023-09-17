@@ -4,11 +4,11 @@ import React from 'react'
 import SectionHeading from "@/components/SectionHeading"
 import { projectsData } from '@/lib/const/skillsData'
 import { Project } from '../Project/Project'
-import useSectionInView from '@/hooks/useSectionInView'
+import { useActiveSection } from '@/zustand/useActiveSection'
 
 const Projects = () => {
   
-  const { ref } = useSectionInView("Projects")
+  const { ref } = useActiveSection("Projects")
 
   return (
     <section ref={ref} id="projects" className="scroll-mt-28 mb-28">

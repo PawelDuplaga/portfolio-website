@@ -5,7 +5,7 @@ import { projectsData } from '@/lib/const/skillsData'
 import Image from 'next/image'
 import { useScroll, motion, useTransform } from 'framer-motion'
 import { BsGithub } from 'react-icons/bs'
-import { useThemeStore } from '@/store/useThemeStore'
+import { useThemeStore } from '@/zustand/useThemeStore'
 
 type ProjectProps = (typeof projectsData)[number]
 
