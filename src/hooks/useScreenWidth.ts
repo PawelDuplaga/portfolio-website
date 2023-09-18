@@ -3,8 +3,10 @@ import { useContext, useEffect, useState } from "react"
 
 
 const useScreenWidth = () => {
-    const [isMobile, setIsMobile] = useState(false);
+    const [isMobile, setIsMobile] = useState<boolean | undefined>(undefined);
     const { screenWidth } = useContext(ScreenWidthContext);
+
+    // console.log(isMobile)
 
     useEffect(() => {
         screenWidth && setIsMobile(screenWidth <= 640);

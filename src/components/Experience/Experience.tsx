@@ -7,16 +7,18 @@ import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timel
 import 'react-vertical-timeline-component/style.min.css';
 import useSectionInView from '@/hooks/useSectionInView';
 import useTheme from '@/hooks/useTheme';
+import useScreenWidth from '@/hooks/useScreenWidth';
 
 const Experience = () => {
 
     const { ref } = useSectionInView("Experience", 1);
     const { theme } = useTheme()
+    const { isMobile } = useScreenWidth();
 
   return (
     <section ref={ref} id="experience" className="scroll-mt-28 mb-28">
         <SectionHeading>My Experience</SectionHeading>
-        <VerticalTimeline lineColor=''>
+        <VerticalTimeline lineColor='' animate={!isMobile}>
             {
                 experiencesData.map((item, index) => (
                     <React.Fragment key={index}>

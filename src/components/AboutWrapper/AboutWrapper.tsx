@@ -16,7 +16,7 @@ const AboutWrapper = ({children} : AboutProps ) =>{
     const { isMobile } = useScreenWidth()
     const { ref } = useSectionInView("About", 1)
 
-    const desktopVariant : Variants = {
+    const  desktopVariant = {
         initial: {
             opacity : 0,
             y: 100,
@@ -29,6 +29,8 @@ const AboutWrapper = ({children} : AboutProps ) =>{
             }
         }
     }
+
+
     
 //   console.log(isMobile)
 
@@ -36,7 +38,7 @@ const AboutWrapper = ({children} : AboutProps ) =>{
     <motion.section
       ref={ref}
       className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
-      variants={!isMobile ? desktopVariant : {}}
+      variants={desktopVariant}
       initial="initial"
       animate="animate"
       id="about"

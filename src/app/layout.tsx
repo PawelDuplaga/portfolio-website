@@ -1,3 +1,4 @@
+
 import Navbar from '@/components/Navbar'
 import './globals.css'
 import { Inter } from 'next/font/google'
@@ -7,6 +8,7 @@ import Footer from '@/components/Footer'
 import ThemeSwitch from '@/components/ThemeSwitch'
 import ThemeContextProvider from '@/context/theme-context'
 import ScreenWidthProvider from '@/context/screen-width-context'
+import { MotionConfig } from 'framer-motion'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -33,11 +35,11 @@ export default function RootLayout({
        <ScreenWidthProvider>
         <ThemeContextProvider>
          <ActiveSectionContextProvider>
-           <ThemeSwitch />
-           <Navbar />
-           {children}
-           <Toaster position="top-right"/>
-           <Footer />
+              <ThemeSwitch />
+              <Navbar />
+              {children}
+              <Toaster position="top-right"/>
+              {/* <Footer /> */}
          </ActiveSectionContextProvider>
         </ThemeContextProvider>
        </ScreenWidthProvider>
