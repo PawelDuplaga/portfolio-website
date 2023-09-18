@@ -14,9 +14,6 @@ import { MotionConfig } from "framer-motion";
 export default function Home() {
 
   const { isMobile } = useScreenWidth();
-  console.log(isMobile)
-
-
 
   return (
     <main className="flex flex-col items-center px-4">

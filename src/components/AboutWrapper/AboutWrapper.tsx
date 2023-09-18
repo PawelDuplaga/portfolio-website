@@ -1,11 +1,8 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import useSectionInView from "@/hooks/useSectionInView";
-import useScreenWidth from "@/hooks/useScreenWidth";
-import { Variants } from "framer-motion";
-
 
 type AboutProps = {
     children : React.ReactNode
@@ -13,9 +10,7 @@ type AboutProps = {
 
 const AboutWrapper = ({children} : AboutProps ) =>{
 
-    const { isMobile } = useScreenWidth()
     const { ref } = useSectionInView("About", 1)
-
     const  desktopVariant = {
         initial: {
             opacity : 0,
@@ -29,10 +24,6 @@ const AboutWrapper = ({children} : AboutProps ) =>{
             }
         }
     }
-
-
-    
-//   console.log(isMobile)
 
   return (
     <motion.section

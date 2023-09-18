@@ -1,7 +1,6 @@
 'use client';
 
 import React, { createContext, useState, useEffect } from 'react';
-
 import { ScreenWidthContextType } from '@/lib/types/ScreenWidthContextType';
 
 export const ScreenWidthContext= createContext<ScreenWidthContextType>({
