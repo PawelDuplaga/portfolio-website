@@ -1,11 +1,12 @@
 'use client'
 
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { projectsData } from '@/lib/const/skillsData'
 import Image from 'next/image'
 import { useScroll, motion, useTransform } from 'framer-motion'
 import { BsGithub } from 'react-icons/bs'
 import useTheme from '@/hooks/useTheme'
+import useScreenWidth from '@/hooks/useScreenWidth'
 
 // interface ProjectProps {
 //     readonly title : string,
@@ -18,11 +19,12 @@ type ProjectProps = (typeof projectsData)[number]
 
 
 export const Project = ({title, description, tags, imageUrl, githubLink}: ProjectProps) => {
+  const { isMobile } = useScreenWidth();
   const projectRef = useRef<HTMLDivElement>(null)
   const { theme } = useTheme()
   const { scrollYProgress } = useScroll({
     target: projectRef,
-    offset:["0 1","1.33 1"]
+    offset:!isMobile ? ["0 1","1.33 1"] : ["0 1","0 1"]
   })
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.75, 1])
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1])
