@@ -6,6 +6,7 @@ import { projectsData } from '@/lib/const/skillsData'
 import { Project } from '../Project/Project'
 import useSectionInView from '@/hooks/useSectionInView'
 
+
 const Projects = () => {
   
   const { ref } = useSectionInView("Projects")

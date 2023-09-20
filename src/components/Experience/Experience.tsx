@@ -18,7 +18,7 @@ const Experience = () => {
 
   return (
     <section ref={ref} id="experience" className="scroll-mt-28 mb-28">
-        <SectionHeading>My Experience</SectionHeading>a
+        <SectionHeading>My Experience</SectionHeading>
         <VerticalTimeline lineColor='' animate={!isMobile}>
             {
                 experiencesData.map((item, index) => (
@@ -27,9 +27,9 @@ const Experience = () => {
                             {...style(theme,item)}
                         >
                             <h3 className="font-semibold capitalize dark:text-white">{item.title}</h3>
-                            <div className="flex gap-2">
-                                {item?.position && <h4 className="dark:text-white/40">{item.position} |</h4>}
-                                <p className="font-normal !mt-0 dark:text-white/40">{item.location}</p>
+                            <div className="flex gap-2 align items-center">
+                                {item?.position && <h4 className="dark:text-white/40 border-r-2 pr-2 border-r-gray-500">{item.position}</h4>}
+                                <p className="flex items-center font-normal !mt-0 dark:text-white/40">{item.location}</p>
                             </div>
                             <p className='!mt-1 !font-normal text-gray-700 dark:text-white/75'>{item.description}</p>
                         </VerticalTimelineElement>
