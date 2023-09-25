@@ -5,10 +5,10 @@ const contentStyle = (theme : Theme) : React.CSSProperties => {
         background:
         theme === "light" 
         ? "#f3f4f6" 
-        : "rgb(156 163 175 / 0.1)",
+        : "rgb(156 163 175 / 0.0)",
     boxShadow: "none",
-    border: "1px solid rgba(0, 0, 0, 0.15)",
-    padding: "1.3rem 2rem",
+    border: theme === "light" ? "1px solid rgba(0, 0, 0, 0.15)" : "2px solid rgba(255, 255, 255, 0.1)",
+    padding: theme === "light" ? "0.5rem 0.5rem" : "0.5rem 0.5rem" ,
     }
 }
 
@@ -48,4 +48,5 @@ export const style = (theme: Theme, item: any) => {
     iconStyle: iconStyle(theme),
     date: date(item),
     icon: icon(item),
+    dateClassName: "ml-2 lg:ml-0",
 }}
