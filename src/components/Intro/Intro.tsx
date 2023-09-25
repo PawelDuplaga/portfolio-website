@@ -35,7 +35,7 @@ const Intro = () => {
                             quality={95}
                             priority={true}
                             className="h-24 w-24 rounded-full  
-                            border-[0.35rem] border-white  object-cover shadow-xl"
+                            border-[0.25rem] border-white  object-cover shadow-xl scale-[1.1]"
                         />
                     </motion.div>
                     <motion.span
@@ -54,7 +54,7 @@ const Intro = () => {
                 </div>
             </div>
             <motion.h1
-                className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-3xl"
+                className="mb-10 mt-12 px-4 text-2xl font-medium !leading-[1.5] sm:text-3xl"
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
             >

@@ -7,7 +7,7 @@ const contentStyle = (theme : Theme) : React.CSSProperties => {
         ? "#f3f4f6" 
         : "rgb(156 163 175 / 0.1)",
     boxShadow: "none",
-    border: "1px solid rgba(0, 0, 0, 0.05)",
+    border: "1px solid rgba(0, 0, 0, 0.15)",
     padding: "1.3rem 2rem",
     }
 }

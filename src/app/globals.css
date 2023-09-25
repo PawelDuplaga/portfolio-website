@@ -11,5 +11,5 @@ html.dark {
 }
 
 .borderBL {
-    @apply border border-black/10;
+    @apply border border-black/20;
 }

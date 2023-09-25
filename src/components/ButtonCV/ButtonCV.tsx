@@ -1,11 +1,13 @@
 import React from "react";
 import { HiDownload } from "react-icons/hi";
+import { emailNotification } from "@/actions/cv-notification-email";
 
 const ButtonCV = (props: { href: string }) => {
     return (
         <a
             className="group flex h-[52px] min-w-[200px] cursor-pointer items-center gap-2 rounded-full bg-white px-7 py-3
                     outline-none transition hover:scale-110 focus:scale-110 active:scale-95 dark:bg-gray-50/10 dark:text-white"
+            onClick={async () => {emailNotification("Someone just downloaded your resume")}}
             href={props.href}
             aria-label="Download CV"
             download
