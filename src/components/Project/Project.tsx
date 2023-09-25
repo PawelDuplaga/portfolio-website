@@ -23,13 +23,17 @@ export const Project = ({title, description, tags, imageUrl, githubLink}: Projec
     return (
       <ProjectWrapper>
         <section
-            className="bg-gradient-to-bl from-transparent to-slate-200 dark:to-slate-300/10 hover:to-slate-300 dark:hover:to-slate-300/20 max-w-[42rem] md:w-[42rem]
-            border-black/5 overflow-hidden sm:pr-8 relative sm:h-[20rem] transition-all ">
-          <div className="py-4 px-5 pb-8 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[50%]">
-            <h3 className="flex justify-between items-center text-2xl font-semibold">{title}
-              <a href={githubLink} target="_"><BsGithub className="scale-[0.8] hover:scale-[1] dark:hover:text-white transition-all"/></a>
-            </h3>
-            <p className="mt-2 leading-relaxed text-gray-700 dark:text-gray-300">{description}</p>
+            className="dark:bg-[#030712]/20 max-w-[42rem] md:w-[42rem] rounded-lg dark:border-[2px] dark:border-solid dark:border-[rgba(255,255,255,0.1)]
+            dark:hover:border-[rgba(255,255,255,0.25)]
+            border-black/5 overflow-hidden relative sm:h-[20rem] transition-all ">
+          <div className="flex flex-col h-full py-4 px-4 pb-4 
+           sm:p-6 sm:max-w-[50%] sm:w-50% sm:group-even:ml-[50%]">
+            <div className='flex flex-col dark:bg-[#030712]/20 p-6 rounded-lg'>
+              <h3 className="flex justify-between items-center text-2xl font-semibold">{title}
+                <a href={githubLink} target="_"><BsGithub className="scale-[0.8] hover:scale-[1] dark:hover:text-white transition-all"/></a>
+              </h3>
+              <p className="mt-2 leading-relaxed text-gray-700 dark:text-gray-300">{description}</p>
+            </div>
             <ul className="flex flex-wrap gap-2 mt-4 sm:mt-auto">
               {tags.map((tag, index) => (
                     <li className="bg-gray-50 dark:bg-gray-950/40 font-medium dark:backdrop-blur-md px-3 py-1 text-[0.7rem] 
