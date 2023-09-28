@@ -38,10 +38,10 @@ export default function RootLayout({
         h-[31.25rem] w-[50rem] rounded-full blur-[30rem] sm:w-[68.75rem] md:left-[-33rem] 
         lg:left-[-20rem] xl:left-[-15rem] 2xl:left-[22rem] dark:bg-[#211F38] transition-all"></div>
         <div className="bg-gray-50  absolute top-[90rem] -z-10 right-[11rem] lg:right-[20rem] xl:right-[48%] 
-        h-[31.25rem] w-[31.25rem] rounded-full blur-[14rem] sm:w-[40rem] dark:bg-[#182C61] opacity-60
+        h-[31.25rem] w-[31.25rem] rounded-full blur-[14rem] sm:w-[44rem] dark:bg-[#182C61] opacity-70
          transition-all"></div>
         <div className="bg-gray-50  absolute top-[170rem] -z-10 right-[11rem] lg:right-[20rem] xl:right-[36%] 
-        h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[40rem] dark:bg-[#182C61] opacity-40
+        h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[40rem] dark:bg-[#182C61] opacity-50
          transition-all"></div>
         <div className="bg-gray-50 absolute top-[235rem] -z-10 left-[-25rem]
         h-[40.25rem] w-[50rem] rounded-full blur-[20rem] sm:w-[68.75rem] md:left-[-33rem] 
