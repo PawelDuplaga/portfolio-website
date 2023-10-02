@@ -84,6 +84,7 @@ export const projectsData = [
   {
     title: "This website",
     githubLink: "https://github.com/PawelDuplaga/portfolio-website",
+    domainLink: null,
     description:
       "Simple, minimalistic personal portoflio for current and future projects.",
     tags: ["React", "Next.js","TypeScript", "Tailwind", "Framer motion"],
@@ -92,6 +93,7 @@ export const projectsData = [
   {
     title: "Netflix clone",
     githubLink: "https://github.com/PawelDuplaga/netflix-clone",
+    domainLink: "https://flix-clone-pd.vercel.app/",
     description: "Netflix clone with google and github auth. User can add movies to favourites.",
     tags: ["Next.js", "TypeScript", "NextAuth", "API", "MongoDb Atlas", "Prisma"],
     imageUrl: [NetflixImg]
@@ -99,6 +101,7 @@ export const projectsData = [
   {
     title: "Hypespace",
     githubLink: "https://github.com/PawelDuplaga/hypespace_frontend",
+    domainLink: null,
     description:
       "E-commerce web application, using headless cms - Medusa.js ",
     tags: ["Medusa.js", "React", "TypeScript", "Next.js", "Zustand"],

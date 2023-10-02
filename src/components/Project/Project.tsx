@@ -6,10 +6,12 @@ import Image from 'next/image'
 import { BsGithub } from 'react-icons/bs'
 import useTheme from '@/hooks/useTheme'
 import ProjectWrapper from '../ProjectWrapper/ProjectWrapper'
+import { FiExternalLink } from 'react-icons/fi';
+import Link from 'next/link'
 
 type ProjectProps = (typeof projectsData)[number]
 
-export const Project = ({title, description, tags, imageUrl, githubLink}: ProjectProps) => {
+export const Project = ({title, description, tags, imageUrl, githubLink, domainLink}: ProjectProps) => {
 
   const { theme } = useTheme()
 
@@ -25,7 +27,7 @@ export const Project = ({title, description, tags, imageUrl, githubLink}: Projec
         <section
             className="dark:bg-[#030712]/20 max-w-[42rem] md:w-[42rem] rounded-lg dark:border-[2px] dark:border-solid dark:border-[rgba(255,255,255,0.1)]
             dark:hover:border-[rgba(255,255,255,0.25)]
-            border-black/5 overflow-hidden relative sm:h-[20rem] transition-all ">
+            border-black/5 overflow-hidden relative sm:h-[22rem] transition-all ">
           <div className="flex flex-col h-full py-4 px-4 pb-4 
            sm:p-6 sm:max-w-[50%] sm:w-50% sm:group-even:ml-[50%]">
             <div className='flex flex-col dark:bg-[#030712]/20 p-6 rounded-lg'>
@@ -33,6 +35,13 @@ export const Project = ({title, description, tags, imageUrl, githubLink}: Projec
                 <a href={githubLink} target="_"><BsGithub className="scale-[0.8] hover:scale-[1] dark:hover:text-white transition-all"/></a>
               </h3>
               <p className="mt-2 leading-relaxed text-gray-700 dark:text-gray-300">{description}</p>
+              {domainLink && 
+              <Link 
+              href={domainLink} 
+              target='_' 
+              className='flex flex-row items-center gap-3 font-semibold mt-4 hover:opacity-70 bg-slate-500 justify-center rounded-md bg-opacity-10 h-[2.5rem]'>
+              Go to project domain <span><FiExternalLink /></span>
+            </Link>}
             </div>
             <ul className="flex flex-wrap gap-2 mt-4 sm:mt-auto">
               {tags.map((tag, index) => (
