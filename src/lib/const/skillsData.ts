@@ -7,6 +7,7 @@ import profileImg from "public/profile.png"
 import potfolioImgDark from "public/Screenshot_515.png"
 import potfolioImgLight from "public/Screenshot_517.png"
 import NetflixImg from "public/Screenshot_536-min.png";
+import AnimationImg from "public/Screenshot_537-min.png";
 
 export const links = [
   {
@@ -87,7 +88,7 @@ export const projectsData = [
     domainLink: null,
     description:
       "Simple, minimalistic personal portoflio for current and future projects.",
-    tags: ["React", "Next.js","TypeScript", "Tailwind", "Framer motion"],
+    tags: ["React", "Next.js","TypeScript", "Tailwind", "Framer Motion"],
     imageUrl: [potfolioImgLight, potfolioImgDark]
   },
   {
@@ -106,6 +107,15 @@ export const projectsData = [
       "E-commerce web application, using headless cms - Medusa.js ",
     tags: ["Medusa.js", "React", "TypeScript", "Next.js", "Zustand"],
     imageUrl: [hypespaceImg,]
+  },
+  {
+    title: "Interactive Animation",
+    githubLink: "https://github.com/PawelDuplaga/creative-app",
+    domainLink: "https://creative-app-theta.vercel.app/",
+    description:
+      "Cool interactive animation for hero section",
+    tags: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
+    imageUrl: [AnimationImg]
   },
   // {
   //   title: "Word Analytics",
