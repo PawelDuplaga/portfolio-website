@@ -6,6 +6,7 @@ import hypespaceImg from "public/Screenshot_516.png";
 import profileImg from "public/profile.png"
 import potfolioImgDark from "public/Screenshot_515.png"
 import potfolioImgLight from "public/Screenshot_517.png"
+import NetflixImg from "public/Screenshot_536-min.png";
 
 export const links = [
   {
@@ -87,6 +88,13 @@ export const projectsData = [
       "Simple, minimalistic personal portoflio for current and future projects.",
     tags: ["React", "Next.js","TypeScript", "Tailwind", "Framer motion"],
     imageUrl: [potfolioImgLight, potfolioImgDark]
+  },
+  {
+    title: "Netflix clone",
+    githubLink: "https://github.com/PawelDuplaga/netflix-clone",
+    description: "Netflix clone with google and github auth. User can add movies to favourites.",
+    tags: ["Next.js", "TypeScript", "NextAuth", "API", "MongoDb Atlas", "Prisma"],
+    imageUrl: [NetflixImg]
   },
   {
     title: "Hypespace",
