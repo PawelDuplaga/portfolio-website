@@ -48,7 +48,7 @@ export const experiencesData = [
     location: "Wrocław, Poland",
     position: null,
     description:
-      "Bachelor of Engineering in Computer Science.",
+      "Bachelor of Engineering in Computer Science - throughout my education, I gained proficiency in several programming languages. Additionally, I completed multiple coursework in project management and software engineering.",
     icon: React.createElement(LuGraduationCap),
     date: "2017-2022",
   },
@@ -66,7 +66,7 @@ export const experiencesData = [
     location: "Wrocław, Poland (remote)",
     position: "Software Engineer",
     description:
-      "Contributed significantly to a high-impact project focused on developing automatic algorithmic energy trading software for European markets. Collaborated within a specialized team responsible for the non-algorithmic backend components of the project.",
+      "I contributed to a project aimed at creating software for automated energy trading within European markets, maintaining and expanding the system by developing new microservices.",
     icon: React.createElement(FaReact),
     date: "2022 - 2023",
   },
@@ -75,7 +75,7 @@ export const experiencesData = [
     location: "Wrocław, Poland (remote)",
     position: "FullStack Engineer",
     description:
-      "Helping building fast e-commerce apps for individual clients.",
+      "I contributed to the development of e-commerce solutions for clients. My responsibilities included webapp page development and seamless integration of Medusa.js headless CMS with the web applications. In projects I'm focused on providing rapid performance with prioritizing a good customer experience.",
     icon: React.createElement(FaReact),
     date: "2023 - present",
   },
