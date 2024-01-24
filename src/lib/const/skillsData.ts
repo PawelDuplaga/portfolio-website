@@ -8,6 +8,8 @@ import potfolioImgDark from "public/Screenshot_515.png"
 import potfolioImgLight from "public/Screenshot_517.png"
 import NetflixImg from "public/Screenshot_536-min.png";
 import AnimationImg from "public/Screenshot_537-min.png";
+import AgencyImg from "public/Screenshot_603-min.png";
+import AnimationImg2 from "public/Screenshot_606-min.png";
 
 export const links = [
   {
@@ -92,12 +94,30 @@ export const projectsData = [
     imageUrl: [potfolioImgLight, potfolioImgDark]
   },
   {
+    title: "Design Agency",
+    githubLink: "https://github.com/PawelDuplaga/creative-agency-html-js",
+    domainLink: "https://duplaga-studio.vercel.app/",
+    description:
+      "Design Agency website",
+    tags: ["HTML", "TypeScript", "SCSS", "GSAP"],
+    imageUrl: [AgencyImg]
+  },
+  {
     title: "Netflix clone",
     githubLink: "https://github.com/PawelDuplaga/netflix-clone",
     domainLink: "https://flix-clone-pd.vercel.app/",
     description: "Netflix clone with google and github auth. User can add movies to favourites.",
     tags: ["Next.js", "TypeScript", "NextAuth", "API", "MongoDb Atlas", "Prisma"],
     imageUrl: [NetflixImg]
+  },
+  {
+    title: "Interactive Animation",
+    githubLink: "https://github.com/PawelDuplaga/3d-test",
+    domainLink: "https://personal-site-pd-test.vercel.app/",
+    description:
+      "Cooler than a cooler, interactive animation for hero section",
+    tags: ["Next.js", "TypeScript", "Framer Motion"],
+    imageUrl: [AnimationImg2]
   },
   {
     title: "Hypespace",
@@ -109,7 +129,7 @@ export const projectsData = [
     imageUrl: [hypespaceImg,]
   },
   {
-    title: "Interactive Animation",
+    title: "Interactive Animation 2",
     githubLink: "https://github.com/PawelDuplaga/creative-app",
     domainLink: "https://creative-app-theta.vercel.app/",
     description:
@@ -117,6 +137,8 @@ export const projectsData = [
     tags: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
     imageUrl: [AnimationImg]
   },
+
+
   // {
   //   title: "Word Analytics",
   //   githubLink: "https://github.com/PawelDuplaga/hypespace_frontend",
