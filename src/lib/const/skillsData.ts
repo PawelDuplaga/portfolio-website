@@ -10,6 +10,7 @@ import NetflixImg from "public/Screenshot_536-min.png";
 import AnimationImg from "public/Screenshot_537-min.png";
 import AgencyImg from "public/Screenshot_603-min.png";
 import AnimationImg2 from "public/Screenshot_606-min.png";
+import audioPlayerImg from "public/Screenshot_614-min.png"
 
 export const links = [
   {
@@ -101,6 +102,15 @@ export const projectsData = [
       "Design Agency website",
     tags: ["HTML", "TypeScript", "SCSS", "GSAP"],
     imageUrl: [AgencyImg]
+  },
+  {
+    title: "Web Audio Player",
+    githubLink: "https://github.com/PawelDuplaga/opera-task",
+    domainLink: "https://duplaga-audio-player.vercel.app/",
+    description:
+      "Spotify-like web audio player, with minimalistic design and elegant animations",
+    tags: ["Next.js", "TypeScript", "SCSS", "Framer-motion", "Figma"],
+    imageUrl: [audioPlayerImg]
   },
   {
     title: "Netflix clone",
